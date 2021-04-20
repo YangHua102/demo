@@ -2,10 +2,11 @@ import Sider from "antd/lib/layout/Sider";
 import React,{ Component } from "react";
 import './index.less'
 import { Layout } from 'antd';
-import {BrowserRouter,Redirect, Route, Switch} from 'react-router-dom'
 
 import ChatBoxNav from '../../../components/chat-leftnav'
-
+import ChatHeader from '../../../components/chat-header'
+import ChatContent from "../../../components/chat-content"
+import ChatSender from '../../../components/chat-sender'
 
 export default class ChatBox extends Component{
     render(){
@@ -13,11 +14,11 @@ export default class ChatBox extends Component{
         return (<div className="chat-box">
    
    <Layout className="chat-box">
-      <Sider width={'15%'} className="chat-nav"><ChatBoxNav/></Sider>
+      <Sider width={'25%'} className="chat-nav"><ChatBoxNav/></Sider>
       <Layout>
-       
-        <Content>Content</Content>
-        <Footer>Footer</Footer>
+       <Header className="chat-header"><ChatHeader/></Header>
+        <Content><ChatContent/></Content>
+        <Footer><ChatSender/></Footer>
       </Layout>
     </Layout>
     

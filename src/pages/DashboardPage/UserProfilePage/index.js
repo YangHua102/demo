@@ -54,7 +54,7 @@ export default class UserProfile extends Component{
             </Col>
             <Col span={8}>
               <p>{user.birthday}</p>
-              <p>{(user.sex == 'male' ? <ManOutlined/> : <WomanOutlined/>)}</p>
+              <p>{(user.sex === 'male' ? <ManOutlined/> : <WomanOutlined/>)}</p>
               <p>{user.country}</p>
             </Col>
           </Row>
